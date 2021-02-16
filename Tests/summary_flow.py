@@ -23,6 +23,8 @@ class MainTest(unittest.TestCase):
         order.add_third_item_to_cart()
         order.proceed_checkout()
 
+    # Manipulate quantities
+
     def test_quantities(self):
         cart = SummaryPage(self.driver)
         prod_item_id_list = cart.get_product_ids()
@@ -47,6 +49,8 @@ class MainTest(unittest.TestCase):
             print('SUCCESS')
         else:
             print('FAIL')
+
+    # Final order process
 
     def test_complete_order(self):
         login = LoginPage(self.driver)
@@ -73,7 +77,6 @@ class MainTest(unittest.TestCase):
             cls.driver.close()
             cls.driver.quit()
             print("Test Completed")
-
 
 
 if __name__ == '__main__':

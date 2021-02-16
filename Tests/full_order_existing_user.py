@@ -9,6 +9,8 @@ class MainTest(unittest.TestCase):
         cls.driver.implicitly_wait(10)
         cls.driver.maximize_window()
 
+    # Add products to cart form the homepage
+
     def test_add_product(self):
         self.driver.get("http://automationpractice.com/index.php")
         order = HomePage(self.driver)
@@ -18,9 +20,13 @@ class MainTest(unittest.TestCase):
         print(cart.get_payment_summary())
         cart.proceed_to_checkout()
 
+    # Login existing user
+
     def test_login_user(self):
         login = LoginPage(self.driver)
-        login.login_existing_user('abc@xyz.com', 'Test@123')
+        login.login_existing_user('abc@xyz.com', 'Test@123')  # The website prohibits automated logins
+
+    # Complete the order process
 
     def test_confirm_address(self):
         address = AddressPage(self.driver)

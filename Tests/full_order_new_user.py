@@ -9,6 +9,8 @@ class MainTest(unittest.TestCase):
         cls.driver.implicitly_wait(10)
         cls.driver.maximize_window()
 
+    # Add product from the homepage
+
     def test_add_product(self):
         self.driver.get("http://automationpractice.com/index.php")
         order = HomePage(self.driver)
@@ -18,14 +20,20 @@ class MainTest(unittest.TestCase):
         print(cart.get_payment_summary())
         cart.proceed_to_checkout()
 
+    # Start the new user creation process
+
     def test_create_new_user(self):
         login = LoginPage(self.driver)
         login.create_new_user('john@gmail.com')
+
+    # Registration form filler, using given data. Can be replaced by DB queries
 
     def test_fill_registration_form(self):
         register = RegistrationPage(self.driver)
         user_data = Locators.user_data
         register.register_new_user(user_data)
+
+    # Complete order process
 
     def test_confirm_address(self):
         address = AddressPage(self.driver)
