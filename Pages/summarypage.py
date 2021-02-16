@@ -1,6 +1,8 @@
 from resources.lib import *
 
 
+# Order Summary page methods
+
 class SummaryPage(BasePage):
 
     def proceed_to_checkout(self):
@@ -23,7 +25,6 @@ class SummaryPage(BasePage):
 
     def get_product_ids(self):
         prod_id_list = []
-        summary = SummaryPage(self.driver)
         item_list = self.driver.find_element_by_id('cart_summary'). \
             find_element_by_tag_name('tbody').find_elements_by_tag_name('tr')
         for item in item_list:

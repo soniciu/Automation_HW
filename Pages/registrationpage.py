@@ -1,6 +1,8 @@
 from resources.lib import *
 
 
+# Registration page form methods
+
 class RegistrationPage(BasePage):
     def register_new_user(self, user_data):
         if (user_data.get('Radio Button') and

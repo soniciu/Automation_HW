@@ -1,6 +1,8 @@
 from resources.lib import *
 
 
+# Shipping page methods
+
 class ShippingPage(BasePage):
     def confirm_shipping(self):
         try:

@@ -1,6 +1,8 @@
 from resources.lib import *
 
 
+# Sign in page methods
+
 class LoginPage(BasePage):
 
     def login_existing_user(self, username, password):

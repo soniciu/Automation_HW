@@ -1,16 +1,14 @@
-from Locators.locators import Locators
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.select import Select
+from resources.lib import *
 
+
+# Page constructor
 
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
 
+
+# Home page methods
 
 class HomePage(BasePage):
 
