@@ -1,4 +1,5 @@
 from resources.lib import *
+from Locators.locators import Locators
 
 
 # Order Summary page methods
